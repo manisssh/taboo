@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    body {
+      background-color: #2a2a2e;
+      color: #ededee;
+      padding: 2.5vh 0 0 2.5vw;
+    }
+  </style>
+</head>
+<html>
+  <body>
+    <h3><br />Syntax:</h3>
+    <pre>
+function name_of_function($var1, $var2, $var3, ... $varN) {
+  .
+  //code
+  .
+  return something;
+}
+    </pre>
+    <br />
+    <hr style="margin-left: 0; width: 99%" />
+    <h3><br />Special Features:</h3>
+    1. Use function_exits("name_of_function") to check availability.<br />
+    2. Functions can return array($var1, $var2, $var3, ... $varN).
+    <pre>
+    &lt;&quest;php
+      $x = 4;
+      $y = 6;
+      $z = 5;
+
+      add_ten($x, $y, $z);
+
+      function add_ten($a, $b, $c) {
+        $a += 10;
+        $b += 10;
+        $c += 10;
+        return array($a, $b, $c);
+      }
+    &quest;&gt;
+    </pre>
+    3. Arguments can be passed by reference using '&' character.
+    <pre>
+    &lt;&quest;php
+      $x = -9;
+      $y = -3;
+      $z = 8;
+
+      abs_array($x, $y, $z);
+
+      function abs_array(&$a, &$b, &$c) {
+        $a = abs($a);
+        $b = abs($b);
+        $c = abs($c);
+      }
+    &quest;&gt;
+    </pre>
+    4. Global variables can be pointed from inside by using "global" keyword.
+    <pre>
+    &lt;&quest;php
+      $a = "NePal";
+      $b = "NEPALI";
+      $c = "devnagari";
+
+      fix_names();
+
+      function fix_names() {
+        global $a, $b, $c;
+        $a = ucfirst(strtolower($a));
+        $b = ucfirst(strtolower($b));
+        $c = ucfirst(strtolower($c));
+      }
+    &quest;&gt;
+    </pre>
+  </body>
+</html>

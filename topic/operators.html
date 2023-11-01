@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    body {
+      background-color: #2a2a2e;
+      color: #ededee;
+      padding: 2.5vh 0 0 2.5vw;
+    }
+  </style>
+</head>
+<html>
+  <body>
+    <p>
+      Mostly same as in C/C++.<br />
+      The different ones are only discussed below.
+    </p>
+    <br />
+
+    <hr style="margin-left: 0; width: 99%" />
+    <h3><br />Bitwise Operators:</h3>
+    <code>
+      $a and $b;<br />
+      $h or $k;<br />
+      $x xor $y;
+    </code>
+    <p>These operators are same as &, | and ^ but have less precedence.</p>
+
+    <hr style="margin-left: 0; width: 99%" />
+    <h3><br />Concatenation Operator:</h3>
+    <code>
+      $a = "Hello";<br />
+      $b = "World";<br />
+      $message = $a." ".$b; //$message = "Hello World";
+    </code>
+    <p>This operator concatenates the strings.</p>
+
+    <hr style="margin-left: 0; width: 99%" />
+    <h3><br />Execution Operator:</h3>
+    <code>
+      $ping = `ping -n 4 google.com`;<br />
+      $copy = `copy index.html backup.html`;
+    </code>
+    <p>
+      The symbol is not apostrophe but a backtick and is used to execute shell
+      commands.
+    </p>
+
+    <hr style="margin-left: 0; width: 99%" />
+    <h3><br />Identity Operator:</h3>
+    <code>
+      $a = 333;<br />
+      $b = '333';<br />
+      $comparision = ($a == $b); //$comparision = TRUE<br />
+      $identity = ($a === $b); //$identity = FALSE
+    </code>
+    <p>
+      This operator returns TRUE if and only if both the data and data type is
+      same.
+    </p>
+  </body>
+</html>
